@@ -10,5 +10,7 @@
     - via useDispatch => dispatch(res.data);
 - If token not present or expire redirect user to login page.
 - Fixed the bug where network tab was calling api again and again for switching to different routes  after the user was logged in!
+- set up logout api
+- 
 
 
