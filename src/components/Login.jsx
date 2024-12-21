@@ -31,7 +31,7 @@ const Login = () => {
         }
     }
     return (
-    <div className="flex justify-center mt-4">
+    <div className="flex justify-center mt-20 items-center">
         <div className="card bg-base-200 w-96 shadow-xl px-6 pb-3">
             <div className="card-body">
                 <h2 className="card-title justify-center font-bold">LOGIN</h2>
@@ -79,7 +79,7 @@ const Login = () => {
                 </label>
            </div>
            <p className="mt-5 text-red-700 text-center">{error}</p>
-           <div className="card-actions justify-center mt-8" >
+           <div className="card-actions justify-center mt-8 mb-6" >
                 <button onClick={handleLogin} className="btn btn-primary">LogIn</button>
             </div>
 
