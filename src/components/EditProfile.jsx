@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UserCard from "../components/UserCard";
 import axios from "axios";
 import {base_url} from "../utils/constants"
@@ -14,13 +14,11 @@ const EditProfile = ({user}) => {
     const [about , setAbout] = useState(user.about);
     const [skills , setSkills] = useState(user.skills);
     const [error , setError] = useState("");
-    const [updated , setUpdate] = useState("");
+    const [alert , setAlert] = useState(false);
     const dispatch = useDispatch();
     
     const saveProfile = async() => {
-
         setError("");
-        setUpdate("");
         try{
             const res = await axios.patch(base_url + "/profile/edit" ,
                 {
@@ -34,7 +32,7 @@ const EditProfile = ({user}) => {
                 } ,
                 {withCredentials : true});
             dispatch(addUser(res?.data?.data));
-            setUpdate(res.data.message);
+            setAlert(true);
 
         }catch(err){
             console.error(Response.data);
@@ -42,6 +40,13 @@ const EditProfile = ({user}) => {
             console.log(err.response.data);
         }
     }
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setAlert(false);
+        }, 3000);
+        return () => clearInterval(interval);
+    },[])
+
     return(
         <>
             <div className="flex justify-center gap-12 ">
@@ -128,18 +133,24 @@ const EditProfile = ({user}) => {
                             {error}   
                         </div>}
 
-                        {updated && <div
-                         className="font-semibold text-green-700 text-center mt-4">
-                            {updated}   
-                        </div>}
-
                         <div className="card-actions justify-center mt-8" >
                             <button className="btn btn-primary" onClick={saveProfile}>Save Profile</button>
                         </div>
+                        
                     </div>
                 </div>
 
                 <UserCard user = {{firstName , lastName , age , about , gender , skills, photoUrl }} />
+
+                {alert && <div className="toast toast-top toast-center">
+                    <div className="alert alert-info">
+                        <span>Changes Saved👍.</span>
+                    </div>
+                    <div className="alert alert-success">
+                        <span>Profile Updated Successfully!</span>
+                    </div>
+                </div>}
+
             </div>
         </>
     )
