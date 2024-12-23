@@ -2,10 +2,10 @@ const UserCard = ({user}) => {
     const {firstName , lastName , age , about , gender , photoUrl, skills } = user;
     return(
             <div className="card bg-base-200 h-[550px] w-96 shadow-xl">
-            <figure className="mt-4">
+            <figure className="mt-6">
                 <img
                 src={photoUrl}
-                className=" w-80 object-cover rounded-md"
+                className=" w-80 h-96 object-cover rounded-md"
                 alt="My profile" />
             </figure>
             <div className="card-body pt-2 pb-6">
