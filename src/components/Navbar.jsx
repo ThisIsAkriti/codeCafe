@@ -16,7 +16,7 @@ const Navbar = () => {
             )
             dispatch(removeUser());
         }catch(err){
-            //console.error(err);
+            console.error(err);
         }
     }
     return (
@@ -44,7 +44,13 @@ const Navbar = () => {
                         <span className="badge">New</span>
                         </Link>
                     </li>
+
+                    <li><Link to={"/connections"}>Connections</Link></li>
+
+                    <li><Link to={"/Requests"}>Requests</Link></li>
+
                     <li><a>Settings</a></li>
+
                     <li><Link to={"/login"} onClick={handleClickLogout}>Logout</Link></li>
                     </ul>
                 </div>

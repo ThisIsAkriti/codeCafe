@@ -35,9 +35,8 @@ const EditProfile = ({user}) => {
             setAlert(true);
 
         }catch(err){
-            console.error(Response.data);
             setError(err.response.data);
-            console.log(err.response.data);
+            console.error(err.response.data);
         }
     }
     useEffect(() => {

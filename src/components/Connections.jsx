@@ -12,12 +12,11 @@ const Connections = () => {
             const res = await axios.get(base_url + "/user/connection" , 
                 {withCredentials: true}
             );
-            console.log(res.data);
-
-            dispatch(addConnection(res.data.data));
+            
+            dispatch(addConnection(res?.data?.data));
 
         }catch(err){
-
+            console.error(err);
         }
     }
 
@@ -25,9 +24,8 @@ const Connections = () => {
         fetchConnection();
     } , []);
 
-    if (!userConnection) return <div>Loading...</div>;
-    
-    if(userConnection.length === 0) return <div>No Connection!</div>
+    if(!userConnection) return;
+    if(userConnection.length === 0) return <div className="font-bold text-center mt-6 text-2xl">No Connection!</div>
 
     return (
         <div>
