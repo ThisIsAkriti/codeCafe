@@ -35,7 +35,7 @@ const UserCard = ({user}) => {
                  : 
                  (<div>Age , Gender</div>)}
 
-                <div>{skills.join( ", ")}</div>
+                <div>{skills}</div>
                 <div className="card-actions justify-center mt-4">
                     <button className="btn btn-primary" onClick={() => handleSendRequest("ignored" , _id)}>Ignore</button>
                     <button className="btn btn-secondary" onClick={() => handleSendRequest("interested" , _id)}>Interested</button>

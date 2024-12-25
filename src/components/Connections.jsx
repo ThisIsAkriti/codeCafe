@@ -42,7 +42,7 @@ const Connections = () => {
                                 </div>
                                 <div>
                                     <div className="font-bold">{firstName} {lastName}</div>
-                                    <div className="md:text-lg text-sm">{age}, {gender}</div>
+                                    <div className="md:text-md text-sm">{age? age : "age"}, {gender? gender : "gender"}</div>
                                     <div className="font-semibold">{about}</div>
                                     <div className="md:text-lg text-sm">{skills.join(", ")}</div>
                                 </div>

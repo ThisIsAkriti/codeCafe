@@ -58,7 +58,7 @@ const Requests = () => {
                                 
                                 <div>
                                     <div className="font-bold">{firstName} {lastName}</div>
-                                    <div className="lg:text-lg md:text-sm">{age}, {gender}</div>
+                                    <div className="lg:text-lg md:text-sm">{age? age : "age"}, {gender? gender : "gender"}</div>
                                     <div className="font-semibold">{about}</div>
                                     <div className="lg:text-lg md:text-sm">{skills.join(", ")}</div>
                                 </div>

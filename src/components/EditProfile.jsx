@@ -49,8 +49,8 @@ const EditProfile = ({user}) => {
 
     return(
         <>
-            <div className="flex justify-center">
-                <div className=" md:flex lg:space-x-14 md:space-x-4 space-y-8 md:space-y-0 mb-24">
+            <div className="flex justify-center items-center min-h-[600px]">
+                <div className=" md:flex lg:space-x-14 md:space-x-4 space-y-8 md:space-y-0 md:m-0 mb-24 mt-10">
 
                     <div className="flex flex-col justify-center items-center">
                         <div className="bg-base-200 w-96 shadow-xl px-6 py-10 rounded-xl">

@@ -17,5 +17,10 @@
 - Added functionality to Accept/Reject buttons via req/accep&&reject api 
 - And removed User form store once req is accepted or rejected.
 - Added interested/ignored feature and remove the user from feed as soon as req is sent.
+- Signup : Added Api and set up signup ui.
+##
+
+
+    <> Keep Coding💙</>
 
 
