@@ -23,7 +23,10 @@ const Feed = () => {
     } , []);
 
     if(!feed){
-        return <div className="flex justify-center items-center mt-10 font-bold ">LOADING...</div>
+        return <div className="flex justify-center items-center mt-10 font-bold text-2xl">LOADING...</div>
+    }
+    if(feed.length <= 0){
+        return <div className="flex justify-center items-center mt-10 font-bold text-3xl ">No New Users!</div>
     }
     return(
         feed && (
