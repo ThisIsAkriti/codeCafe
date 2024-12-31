@@ -6,7 +6,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+         'custom-100px-1fr': ' 1fr 100px', 
+        },
+    },
   },
   plugins: [
     daisyui,

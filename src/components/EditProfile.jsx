@@ -49,7 +49,7 @@ const EditProfile = ({user}) => {
 
     return(
         <>
-            <div className="flex justify-center items-center min-h-[600px]">
+            <div className="flex justify-center items-center min-h-[574px]">
                 <div className=" md:flex lg:space-x-14 md:space-x-4 space-y-8 md:space-y-0 md:m-0 mb-24 mt-10">
 
                     <div className="flex flex-col justify-center items-center">
