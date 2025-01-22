@@ -20,7 +20,19 @@
 - Signup : Added Api and set up signup ui.
 ##
 
-
+### Deployement( via aws) :
+- install node 
+- git clone 'yourproject'
+- npm install
+- npm run build
+- install nginx
+    - sudo apt update 
+    - sudod apt install nginx
+    - sudo systemctl start nginx(to start nginx)
+    sudo systemctl enable nginx
+    - copy code from dist to /var/www/html/
+        - sudo scp -r dist/* /var/www/html/
+    - enable port 80 on your instance 
     <> Keep Coding💙</>
 
 

@@ -29,7 +29,7 @@ const Connections = () => {
 
     return (
         <div>
-            <h1 className="text-center font-bold text-2xl mb-4">Connections</h1>
+            <h1 className="text-center font-bold text-2xl mb-6 mt-6">Connections</h1>
 
             {
                 userConnection.map((connection) => {
@@ -47,15 +47,6 @@ const Connections = () => {
                                     <div className="font-semibold">{about}</div>
                                     <div className="md:text-lg text-sm">{skills.join(", ")}</div>
                                 </div>    
-                                {/* <div className="bg-green-800 p-1">
-                                    <img className="w-20 h-24 object-cover rounded-md" src={photoUrl} alt="user profile" />
-                                </div>
-                                <div className="bg-red-800">
-                                    <div className="font-bold">{firstName} {lastName}</div>
-                                    <div className="md:text-md text-sm">{age? age : "age"}, {gender? gender : "gender"}</div>
-                                    <div className="font-semibold w-[300px]">{about}</div>
-                                    <div className="md:text-lg text-sm">{skills.join(", ")}</div>
-                                </div> */} 
                             </div>
                         </div>
                     )
