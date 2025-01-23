@@ -27,9 +27,11 @@
 - npm run build
 - install nginx
     - sudo apt update 
-    - sudod apt install nginx
+    - sudod apt install nginx 
     - sudo systemctl start nginx(to start nginx)
     sudo systemctl enable nginx
+
+    #### This step should process after every new commit
     - copy code from dist to /var/www/html/
         - sudo scp -r dist/* /var/www/html/
     - enable port 80 on your instance 
